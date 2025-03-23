@@ -15,28 +15,34 @@ const ProjectTypeCard = ({
   title: string;
 }) => {
   return (
-    <div className="w-[330px] h-[374px] flex flex-col gap-[24px] ">
-      <div className="flex items-center justify-center w-full border border-black/15 h-[225px] rounded-xl p-4">
-        <Image
-          src={`/${image}.svg`}
-          height={180}
-          width={255}
-          alt="ui_ux"
-          className="w-[255px] h-[170px]"
-        />
+    <Link href={`/projects?category=${url}`}>
+      <div className="w-[330px] h-[374px] flex flex-col gap-[24px] cursor-pointer transition-all group">
+        <div className="flex items-center justify-center w-full border border-black/15 h-[225px] rounded-xl p-4 group-hover:shadow-lg transition-all duration-300">
+          <Image
+            src={`/${image}.svg`}
+            height={180}
+            width={255}
+            alt="ui_ux"
+            className="w-[255px] h-[170px] group-hover:scale-110 transition-all duration-300"
+          />
+        </div>
+        <div className="w-full">
+          <h1 className="font-bold">{title}</h1>
+          <p className="mt-1 line-clamp-3">{desc}</p>
+
+          <Link
+            href={`/projects?category=${url}`}
+            className="flex items-center gap-2 text-[#4BB543] font-bold mt-[16px]"
+          >
+            View Projects
+            <ArrowRight
+              className="font-bold group-hover:translate-x-1 transition-all duration-300"
+              strokeWidth={1.2}
+            />
+          </Link>
+        </div>
       </div>
-      <div className="w-full">
-        <h1 className="font-bold">{title}</h1>
-        <p className="mt-1 line-clamp-3">{desc}</p>
-        <Link
-          href={`/projects?category=${url}`}
-          className="flex items-center gap-2 text-[#4BB543] font-semibold mt-[25px]"
-        >
-          View Projects
-          <ArrowRight className="font-normal" strokeWidth={0.75} />
-        </Link>
-      </div>
-    </div>
+    </Link>
   );
 };
 
