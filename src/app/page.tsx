@@ -7,6 +7,7 @@ import HelpSection from "@/components/help-section";
 import HeroSection from "@/components/hero-section";
 import MoreAboutSection from "@/components/more-about-section";
 import ProjectsSection from "@/components/projects-section";
+import TestimonialCarousel from "@/components/quote-section";
 import QuoteSection from "@/components/quote-section";
 import SubHero from "@/components/sub-hero";
 export default function Home() {
@@ -27,7 +28,7 @@ export default function Home() {
       <div className="max-w-[1440px] mx-auto">
         <MoreAboutSection />
       </div>
-      <QuoteSection />
+      <TestimonialCarousel />
       <div className="max-w-[1440px] mx-auto">
         <AvailableSection />
       </div>
