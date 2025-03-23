@@ -45,7 +45,7 @@ const Navbar = () => {
             <Link
               href={link.href}
               key={link.href}
-              className={`px-7 text-sm  ${
+              className={`px-6 text-sm  ${
                 pathname === link.href ? "font-bold" : ""
               }`}
             >

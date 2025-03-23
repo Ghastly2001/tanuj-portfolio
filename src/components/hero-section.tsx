@@ -6,34 +6,34 @@ import FadeUp from "./animations/fade-up";
 
 const HeroSection = () => {
   return (
-    <div className="h-[calc(100vh-80px)] max-w-[1200px] mx-auto">
-      <div className="flex items-center md:gap-12 h-[80%] px-4 sm:px-10 flex-col sm:flex-row justify-center">
-        <div className="max-w-[500px] flex flex-col gap-5">
-          <p className="flex font-semibold tracking-wide max-sm:text-xs max-sm:items-center">
+    <div className="h-[calc(100vh-80px)] max-w-5xl mx-auto">
+      <div className="flex items-center md:gap-12 h-[80%] px-4 sm:px-10 flex-col sm:flex-row">
+        <div className="max-w-[500px] flex flex-col gap-3.5">
+          <p className="flex font-semibold tracking-tight max-sm:text-xs max-sm:items-center">
             <Image src={"/palm.svg"} width={25} height={25} alt="palm" />
             Hi! I&apos;m{" "}
-            <span className="text-[#4BB543] tracking-wide mx-1">
+            <span className="text-[#4BB543] tracking-tight mx-1">
               Tanuj Pandey
             </span>{" "}
             & your go-to
           </p>
-          <div className="text-5xl font-bold tracking-wider max-w-[400px] max-sm:text-3xl">
+          <div className="text-5xl font-bold tracking-tight max-w-[400px] max-sm:text-3xl leading-[60px]">
             Fashion &<div>UI-UX Designer</div>
           </div>
-          <h1>
+          <p className="text-sm font-medium">
             for startups to large organizations, let’s transform complex design
             problems into simple solutions.
-          </h1>
-          <div className="flex items-center gap-4">
+          </p>
+          <div className="flex items-center gap-4 py-1.5">
             <Link
               href="/resume.pdf"
               download={true}
-              className="border border-[#D5D5D5] py-5 px-10 rounded-md font-bold hover:bg-[#0A0A0A] hover:text-white transition-all"
+              className="border border-[#D5D5D5] py-3.5 px-10 rounded-md font-bold hover:bg-[#0A0A0A] hover:text-white transition-all"
             >
               Resume
             </Link>
             <Link
-              className="border border-[#D5D5D5] py-5 px-10 rounded-md font-bold hover:bg-[#0A0A0A] hover:text-white transition-all whitespace-nowrap"
+              className="border border-[#D5D5D5] py-4 px-10 rounded-md font-bold hover:bg-[#0A0A0A] hover:text-white transition-all whitespace-nowrap"
               href={"mailto:tanujpandey0303@gmail.com"}
             >
               E-Mail
@@ -45,7 +45,7 @@ const HeroSection = () => {
             expertise to a company.
           </p>
         </div>
-        <div className="relative w-[70%] h-[70%] pointer-events-none -z-10 hidden sm:block">
+        <div className="relative w-[60%] h-[60%] pointer-events-none  hidden sm:block">
           <Image
             src={"/hero-section-image.svg"}
             fill
