@@ -12,7 +12,6 @@ import SubHero from "@/components/sub-hero";
 export default function Home() {
   return (
     <div>
-      <DownloadResume />
       <div className="max-w-[1440px] mx-auto">
         <HeroSection />
       </div>

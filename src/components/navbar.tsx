@@ -40,11 +40,12 @@ const Navbar = () => {
           />
         </div>
         <div className="hidden sm:block">
+          {/* WIP: Projects active on link click */}
           {links.map((link) => (
             <Link
               href={link.href}
               key={link.href}
-              className={`px-7 text-sm tracking-widen ${
+              className={`px-7 text-sm  ${
                 pathname === link.href ? "font-bold" : ""
               }`}
             >
