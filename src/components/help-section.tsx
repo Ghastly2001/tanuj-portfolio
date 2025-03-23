@@ -4,31 +4,41 @@ import React from "react";
 const HelpSection = () => {
   const data = [
     {
-      title: "Improving Engagement Across Platforms?",
-      desc: "I craft user-centric designs and cohesive fashion concepts that enhance your brand identity and captivate your audience.",
+      title: "ONDC X NIFT",
+      desc: "Awarded 3rd place nationally in the super-hackathon held by ONDC for the presentation of research findings and a user-centric design solution.",
+      position: 3,
     },
     {
-      title: "Need a Website, App, or Lookbook Revamp?",
-      desc: "I transform digital platforms with intuitive designs and fashion assets that boost user satisfaction and visual appeal.",
+      title: "Proto-UI 2024 by IIT Patna",
+      desc: "Nationally awarded 1st place in the Proto-UI hackathon organized by IIT Patna, for presenting a cutting-edge and innovative user interface design.",
+      position: 1,
     },
     {
-      title: "Improving Engagement Across Platforms?",
-      desc: "Whether it's optimizing user journeys for a digital app or curating impactful styling for campaigns, I design to connect with your audience deeply.",
+      title: "India Skill Competition 2024",
+      desc: "Shortlisted for the India Skill Competition 2024 second round in AR/VR category.",
+      position: 2,
     },
     {
-      title: "Seeking Strategy in UX or Fashion?",
-      desc: "From defining user personas and competitive analysis to creating innovative fashion concepts, I align strategy with creativity to deliver results.",
+      title: "Synergy 2024 by IIIT Bangalore",
+      desc: "Nationally honored with 1st place in the Synergy UI-UX hackathon organized by IIIT Bangalore for excellence in user experience design.",
+      position: 1,
     },
   ];
   return (
-    <div className="bg-[#F7F7FA] h-[600px] w-full max-sm:px-4">
-      <div className="max-w-[1100px] mx-auto h-full flex items-center justify-center flex-col">
+    <div className="bg-[#F7F7FA] h-[600px] w-full max-sm:px-4 ">
+      <div className="max-w-5xl mx-auto h-full flex items-center justify-center flex-col px-4 sm:px-10">
         <h1 className="font-bold text-3xl w-full text-center">
-          Ways I can help?
+          Passion Meets{" "}
+          <span className="font-bold text-[#4BB543]">Recognition</span>
         </h1>
         <div className="grid grid-cols-2 mt-[67px] gap-9">
           {data.map((item, index) => (
-            <GridCard desc={item.desc} title={item.title} key={index} />
+            <GridCard
+              desc={item.desc}
+              title={item.title}
+              key={index}
+              position={item.position}
+            />
           ))}
         </div>
       </div>
@@ -38,14 +48,22 @@ const HelpSection = () => {
 
 export default HelpSection;
 
-function GridCard({ title, desc }: { title: string; desc: string }) {
+function GridCard({
+  title,
+  desc,
+  position,
+}: {
+  title: string;
+  desc: string;
+  position: number;
+}) {
   return (
     <div className="flex items-start gap-4 max-w-[90%]">
       <Image
-        src={"/check.svg"}
+        src={`/medal-${position}.svg`}
         width={18}
         height={18}
-        alt="check"
+        alt="medal"
         className="mt-1"
       />
       <div className="flex flex-col justify-start">

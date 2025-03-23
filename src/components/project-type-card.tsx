@@ -30,16 +30,13 @@ const ProjectTypeCard = ({
           <h1 className="font-bold">{title}</h1>
           <p className="mt-1 line-clamp-3">{desc}</p>
 
-          <Link
-            href={`/projects?category=${url}`}
-            className="flex items-center gap-2 text-[#4BB543] font-bold mt-[16px]"
-          >
+          <div className="flex items-center gap-2 text-[#4BB543] font-bold mt-[16px]">
             View Projects
             <ArrowRight
               className="font-bold group-hover:translate-x-1 transition-all duration-300"
               strokeWidth={1.2}
             />
-          </Link>
+          </div>
         </div>
       </div>
     </Link>
