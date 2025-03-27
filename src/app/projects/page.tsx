@@ -21,6 +21,9 @@ function ProjectsPageContent() {
     }[]
   >([]);
   const category = searchParams.get("category");
+  const categoryList = ["ui_ux", "fashion", "research"];
+  const notInCategories = categoryList.filter((cat) => cat !== category);
+
   useEffect(() => {
     if (category) {
       setCategoryProjects(
