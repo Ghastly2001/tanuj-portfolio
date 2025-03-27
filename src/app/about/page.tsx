@@ -3,7 +3,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="h-[calc(100vh-180px)] max-w-[1200px] mx-auto flex flex-col items-start justify-center">
+    <div className="h-[calc(100vh-180px)] max-w-5xl mx-auto flex flex-col items-start justify-center px-4 sm:px-10">
       <div className="flex items-center gap-6">
         <div className="relative w-[66px] h-[80px]">
           <Image src={"/about-man.svg"} fill alt="about" />

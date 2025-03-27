@@ -154,7 +154,7 @@ const Card = ({
   return (
     <div className="w-full flex gap-[55px]">
       <motion.div
-        className={`relative min-w-[700px] h-[531px] overflow-hidden rounded-lg`}
+        className={`relative min-w-[600px] h-[531px] overflow-hidden rounded-lg`}
         style={{ y: i * 30 }}
       >
         <motion.div

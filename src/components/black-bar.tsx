@@ -2,15 +2,17 @@ import Image from "next/image";
 import React from "react";
 
 const BlackBar = () => {
+  const date = new Date();
+  const currentYear = date.getFullYear();
   return (
-    <div className="w-full h-[50px] bg-black  px-4">
-      <div className="max-w-[1200px] flex items-center justify-between mx-auto h-full">
+    <div className="w-full h-[80px] bg-black   px-4  ">
+      <div className="max-w-7xl flex items-center justify-between mx-auto h-full">
         <div className=" flex items-center gap-4">
-          <Image src={"/mail.svg"} width={30} height={30} alt="mail" />
-          <Image src={"/linkedin.svg"} width={30} height={30} alt="mail" />
-          <Image src={"/behance.svg"} width={30} height={30} alt="mail" />
+          <p className="mx-auto text-white text-sm">
+            © {currentYear} Tanuj Designs.
+          </p>
         </div>
-        <p className="text-white">
+        <p className="text-white text-sm">
           Crafted with love 🤍 and lots of chai & coffee ☕
         </p>
       </div>

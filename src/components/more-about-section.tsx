@@ -27,7 +27,7 @@ const MoreAboutSection = () => {
             I believe in waking up each day eager to make a difference!
           </p>
         </div>
-        <div className="relative w-1/2 h-1/2">
+        <div className="relative w-1/2 h-1/2 hidden lg:block">
           <Image src={"tea-window.svg"} fill alt="tea" />
         </div>
       </div>

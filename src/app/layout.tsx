@@ -3,7 +3,6 @@ import "./globals.css";
 import localfont from "next/font/local";
 import Navbar from "@/components/navbar";
 import BlackBar from "@/components/black-bar";
-import CopyrightSection from "@/components/copyright-section";
 import DownloadResume from "@/components/download-resume";
 const avenirNextLTPro = localfont({
   src: [
@@ -51,7 +50,6 @@ export default function RootLayout({
           {children}
         </main>
         <BlackBar />
-        <CopyrightSection />
       </body>
     </html>
   );

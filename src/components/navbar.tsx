@@ -4,7 +4,9 @@ import Link from "next/link";
 import React from "react";
 import { Menu } from "lucide-react";
 import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
 const Navbar = () => {
+  const router = useRouter();
   const links = [
     {
       name: "Home",
@@ -29,9 +31,12 @@ const Navbar = () => {
   ];
   const pathname = usePathname();
   return (
-    <div className="fixed w-full top-0 bg-white/60 shadow-sm shadow-black/[0.05] z-[99999] backdrop-blur-md">
+    <div className="fixed w-full top-0 bg-white/90 shadow-sm shadow-black/[0.05] z-[99999] backdrop-blur-sm">
       <div className="w-full h-[80px] flex items-center px-4 justify-between max-w-7xl mx-auto">
-        <div className="relative w-[50px] h-[50px]">
+        <div
+          className="relative w-[50px] h-[50px] cursor-pointer"
+          onClick={() => router.push("/")}
+        >
           <Image
             src={"/logo.svg"}
             layout="fill"

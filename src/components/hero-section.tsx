@@ -7,7 +7,7 @@ import FadeUp from "./animations/fade-up";
 const HeroSection = () => {
   return (
     <div className="h-[calc(100vh-80px)] max-w-5xl mx-auto">
-      <div className="flex items-center md:gap-12 h-[80%] px-4 sm:px-10 flex-col sm:flex-row">
+      <div className="flex items-center md:gap-12 h-[80%] px-4 sm:px-10 flex-col sm:flex-row justify-center">
         <div className="max-w-[500px] flex flex-col gap-3.5">
           <p className="flex font-semibold tracking-tight max-sm:text-xs max-sm:items-center">
             <Image src={"/palm.svg"} width={25} height={25} alt="palm" />

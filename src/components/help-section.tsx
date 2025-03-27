@@ -25,13 +25,13 @@ const HelpSection = () => {
     },
   ];
   return (
-    <div className="bg-[#F7F7FA] h-[600px] w-full max-sm:px-4 ">
+    <div className="bg-[#F7F7FA] h-[760px] lg:h-[600px] w-full px-0  ">
       <div className="max-w-5xl mx-auto h-full flex items-center justify-center flex-col px-4 sm:px-10">
-        <h1 className="font-bold text-3xl w-full text-center">
+        <h1 className="font-bold text-3xl w-full text-start lg:text-center">
           Passion Meets{" "}
           <span className="font-bold text-[#4BB543]">Recognition</span>
         </h1>
-        <div className="grid grid-cols-2 mt-[67px] gap-9">
+        <div className="grid grid-cols-1 lg:grid-cols-2 mt-[67px] gap-9">
           {data.map((item, index) => (
             <GridCard
               desc={item.desc}

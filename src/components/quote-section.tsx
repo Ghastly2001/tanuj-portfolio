@@ -45,7 +45,7 @@ const TestimonialCarousel = () => {
   };
 
   return (
-    <div className="bg-[#F7F7FA] h-[425px] w-full max-sm:px-4 flex items-center justify-center relative overflow-hidden">
+    <div className="bg-[#F7F7FA] h-[500px] lg:h-[425px] w-full max-sm:px-4 flex items-center justify-center relative overflow-hidden">
       <AnimatePresence mode="wait" initial={false}>
         <motion.div
           key={activeIndex}
@@ -61,9 +61,9 @@ const TestimonialCarousel = () => {
               width={100}
               height={62}
               alt="quote"
-              className="mb-auto"
+              className="mb-auto hidden lg:block"
             />
-            <div className="w-[780px] px-16">
+            <div className="w-[780px] px-8 lg:px-16">
               <p className="text-center leading-[32px] text-[16px] text-black/[0.78]">
                 {testimonials[activeIndex].text}
               </p>
@@ -84,14 +84,14 @@ const TestimonialCarousel = () => {
               width={100}
               height={62}
               alt="quote"
-              className="mt-auto"
+              className="mt-auto hidden lg:block"
             />
           </div>
         </motion.div>
       </AnimatePresence>
 
       {/* Navigation Dots */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 space-x-2 hidden lg:flex">
         {testimonials.map((_, index) => (
           <button
             key={index}
@@ -114,7 +114,7 @@ const TestimonialCarousel = () => {
             prev === 0 ? testimonials.length - 1 : prev - 1
           );
         }}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 "
         aria-label="Previous testimonial"
       >
         ←

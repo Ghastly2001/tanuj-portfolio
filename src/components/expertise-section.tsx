@@ -7,7 +7,7 @@ const ExpertiseSection = () => {
       <div className="max-w-5xl mx-auto px-4 sm:px-10">
         <div className="relative w-full flex h-[300px] items-center">
           <div className="w-full mb-auto flex flex-col gap-5">
-            <h1 className="font-bold text-3xl w-full">
+            <h1 className="font-bold  text-2xl lg:text-3xl w-full">
               Skilled in industry-leading software,
               <br /> I have <span className="text-[#4BB543]">expertise</span> in
               these tools.
@@ -18,11 +18,11 @@ const ExpertiseSection = () => {
               my creations to life.
             </p>
           </div>
-          <div className="relative w-[500px] h-[400px] mb-24">
+          <div className="lg:block relative w-[500px] h-[400px] mb-24 hidden ">
             <Image src={"/person-thinking.svg"} fill alt="expertise" />
           </div>
         </div>
-        <div className="w-full flex items-center justify-between gap-10">
+        <div className="w-full flex items-center justify-between lg:gap-10">
           <div className="flex flex-col gap-4">
             <Image
               src={"/figma.svg"}

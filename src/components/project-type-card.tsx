@@ -16,7 +16,7 @@ const ProjectTypeCard = ({
 }) => {
   return (
     <Link href={`/projects?category=${url}`}>
-      <div className="w-[330px] h-[374px] flex flex-col gap-[24px] cursor-pointer transition-all group">
+      <div className="lg:w-[330px] lg:h-[374px] h-full w-full flex flex-col gap-[24px] cursor-pointer transition-all group">
         <div className="flex items-center justify-center w-full border border-black/15 h-[225px] rounded-xl p-4 group-hover:shadow-lg transition-all duration-300">
           <Image
             src={`/${image}.svg`}

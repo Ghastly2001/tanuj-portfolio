@@ -10,7 +10,7 @@ const BringSection = () => {
           as an Employee
         </h1>
       </div>
-      <div className="grid grid-cols-3 gap-[26px] mt-[40px]">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-[26px] mt-[40px]">
         <div className=" border border-[#EBEBEB] rounded-xl  flex flex-col gap-[30px] p-4">
           <div className="relative flex items-center justify-center h-[150px] w-full -z-10">
             <Image src={"/clock.svg"} fill alt="clock" />

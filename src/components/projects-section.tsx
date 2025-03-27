@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectTypeCard from "./project-type-card";
+import Link from "next/link";
 
 const ProjectsSection = () => {
   const projects = [
@@ -25,22 +26,24 @@ const ProjectsSection = () => {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-10 ">
       <div className="fflex items-start md:gap-12 h-[80%] flex-col sm:flex-row mt-[110px]">
-        <h1 className="max-w-[400px] text-3xl font-bold leading-[32px]">
+        <h1 className="max-w-full lg:max-w-[400px] text-2xl lg:text-3xl font-bold leading-none lg:leading-[32px]">
           Check out some of the <span className="text-[#4BB543]">projects</span>{" "}
           I&apos;ve worked on
         </h1>
-        <p className="max-w-[60%] leading-[32px] text-[16px] mt-[39px]">
+        <p className="max-w-full lg:max-w-[60%] lg:leading-[32px] text-[16px] mt-[24px] lg:mt-[39px]">
           Creativity meets functionality across fashion and UX design. Here,
           you&apos;ll find a curated selection of my work that reflects my
           passion for blending artistic vision with practical solutions. Explore
           my work to see how I integrate style with purpose, creating designs
           that are both visually captivating and user-centric.
         </p>
-        <button className="border border-[#D5D5D5] py-3 px-5 rounded-md font-bold hover:bg-[#0A0A0A] hover:text-white transition-all mt-[37px] text-lg">
-          View All Design Works
-        </button>
+        <Link href={"https://www.behance.net/tanujpandey2"}>
+          <button className="border border-[#D5D5D5] py-3 px-5 rounded-md font-bold hover:bg-[#0A0A0A] hover:text-white transition-all mt-[37px] text-lg">
+            View All Design Works
+          </button>
+        </Link>
       </div>
-      <div className="mt-[55px] flex items-center gap-7 justify-between">
+      <div className="mt-[55px] flex lg:flex-row lg:items-center gap-7 justify-between flex-col">
         {projects.map((project, index) => (
           <ProjectTypeCard
             key={index}
