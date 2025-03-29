@@ -6,7 +6,7 @@ import FadeUp from "./animations/fade-up";
 
 const HeroSection = () => {
   return (
-    <div className="h-[calc(100vh-80px)] max-w-5xl mx-auto mb-16 lg:mb-0">
+    <div className="h-screen lg:h-[calc(100vh-80px)] max-w-5xl mx-auto my-16 lg:mb-0">
       <div className="flex items-center  md:gap-12 h-[80%] px-8 sm:px-10 flex-col-reverse sm:flex-row justify-center">
         <div className="w-full lg:max-w-[500px] flex flex-col gap-5 lg:gap-3.5">
           <p className="flex font-semibold tracking-tight max-sm:text-xs max-sm:items-center pb-3 lg:pb-0">
@@ -45,7 +45,7 @@ const HeroSection = () => {
             expertise to a company.
           </p>
         </div>
-        <div className="relative w-[80%] h-[80%] lg:w-[60%] lg:h-[60%] pointer-events-none ">
+        <div className="relative w-[75%] h-[75%] lg:w-[60%] lg:h-[60%] pointer-events-none -mb-16 lg:mb-0">
           <Image
             src={"/hero-section-image.svg"}
             fill
@@ -54,7 +54,7 @@ const HeroSection = () => {
         </div>
       </div>
       <div className="w-full h-[calc(100vh-80%-80px)] my-16 lg:my-0">
-        <p className="text-sm text-[#4BB543] text-center">
+        <p className="text-sm text-[#4BB543] text-center font-medium">
           A FEW OF THE PLACES I WORKED
         </p>
         <div className="relative flex items-center justify-center w-[80%] h-[70%] mx-auto -z-10">

@@ -34,7 +34,7 @@ const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <div className="fixed w-full top-0 bg-white/90 shadow-sm shadow-black/[0.05] z-[10] backdrop-blur-sm">
+    <div className="fixed w-full top-0 bg-white/90 shadow-none lg:shadow-sm  lg:shadow-black/[0.05] z-[10] backdrop-blur-sm">
       <div className="w-full h-[80px] flex items-center px-4 justify-between max-w-7xl mx-auto">
         <div
           className="relative w-[50px] h-[50px] cursor-pointer"
