@@ -25,13 +25,13 @@ const HelpSection = () => {
     },
   ];
   return (
-    <div className="bg-[#F7F7FA] h-[760px] lg:h-[600px] w-full px-0  ">
+    <div className="bg-[#F7F7FA] h-full py-20 lg:py-0 lg:h-[600px] w-full px-8  ">
       <div className="max-w-5xl mx-auto h-full flex items-center justify-center flex-col px-4 sm:px-10">
         <h1 className="font-bold text-3xl w-full text-start lg:text-center">
           Passion Meets{" "}
           <span className="font-bold text-[#4BB543]">Recognition</span>
         </h1>
-        <div className="grid grid-cols-1 lg:grid-cols-2 mt-[67px] gap-9">
+        <div className="grid grid-cols-1 lg:grid-cols-2 mt-[40px] lg:mt-[67px] gap-6">
           {data.map((item, index) => (
             <GridCard
               desc={item.desc}
@@ -67,8 +67,12 @@ function GridCard({
         className="mt-1"
       />
       <div className="flex flex-col justify-start">
-        <h1 className="text-[16px] font-bold">{title}</h1>
-        <p className="text-[16px] text-[#333333]">{desc}</p>
+        <h1 className="text-sm leading-[28px] lg:text-[16px] font-bold">
+          {title}
+        </h1>
+        <p className="text-sm leading-[28px] lg:text-[16px] text-[#333333]">
+          {desc}
+        </p>
       </div>
     </div>
   );

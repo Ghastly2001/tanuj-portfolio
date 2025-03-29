@@ -3,10 +3,10 @@ import React from "react";
 
 const MoreAboutSection = () => {
   return (
-    <div className="max-w-5xl h-[630px] mx-auto">
-      <div className="flex items-center justify-between h-full px-4 sm:px-10 gap-4">
+    <div className="max-w-5xl h-[630px] mx-auto my-20">
+      <div className="flex flex-col-reverse lg:flex-row items-center justify-between h-full px-8 sm:px-10 gap-4 ">
         <div className="w-full">
-          <p className="text-[#4BB543] text-xs ">MORE ABOUT ME</p>
+          <p className="text-[#4BB543] text-xs font-medium ">MORE ABOUT ME</p>
           <h1 className="text-3xl font-bold mt-[15px]">
             <span className="text-[#4BB543]"> Digital designer </span> and a
             little <br /> bit of everything
@@ -27,7 +27,7 @@ const MoreAboutSection = () => {
             I believe in waking up each day eager to make a difference!
           </p>
         </div>
-        <div className="relative w-1/2 h-1/2 hidden lg:block">
+        <div className="relative w-1/2 h-1/2 ">
           <Image src={"tea-window.svg"} fill alt="tea" />
         </div>
       </div>
