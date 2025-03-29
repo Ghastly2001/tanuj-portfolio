@@ -24,6 +24,7 @@ const MobileMenu = ({ className, links }: IMobileMenu) => {
         closed: { y: 100, opacity: 0 },
       }}
       transition={{ duration: 0.5, ease: "circOut", delay: index * 0.1 }}
+      key={item.name}
     >
       <Link
         key={item.name}
