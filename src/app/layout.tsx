@@ -43,7 +43,7 @@ export default function RootLayout({
       <body className={`${avenirNextLTPro.className} antialiased `}>
         <Navbar />
         <main className="mt-[80px] text-[#333333]">
-          <div className="absolute w-[52px] h-[165px] right-0 top-32 ">
+          <div className="absolute w-[52px] h-[165px] right-0 top-32 hidden lg:block">
             <DownloadResume />
           </div>
 

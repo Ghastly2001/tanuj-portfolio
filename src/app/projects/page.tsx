@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import React, { Suspense, useEffect, useRef, useState } from "react";
 import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
+import RecommendedProjects from "@/components/recommended-projects";
 
 // Wrapper component to handle Suspense
 function ProjectsPageContent() {
@@ -21,8 +22,6 @@ function ProjectsPageContent() {
     }[]
   >([]);
   const category = searchParams.get("category");
-  const categoryList = ["ui_ux", "fashion", "research"];
-  const notInCategories = categoryList.filter((cat) => cat !== category);
 
   useEffect(() => {
     if (category) {
@@ -86,9 +85,14 @@ function ProjectsPageContent() {
 
 // Main page component wrapped in Suspense
 const ProjectsPage = () => {
+  const searchParams = useSearchParams();
+  const categoryList = ["ui_ux", "fashion", "research"];
+  const category = searchParams.get("category");
+
   return (
     <Suspense fallback={<div className="min-h-screen">Loading...</div>}>
       <ProjectsPageContent />
+      <RecommendedProjects category={category!} />
     </Suspense>
   );
 };
@@ -155,14 +159,13 @@ const Card = ({
   i: number;
 }) => {
   return (
-    <div className="w-full flex gap-[55px]">
+    <div className="w-full flex items-end justify-between gap-8">
       <motion.div
-        className={`relative min-w-[600px] h-[531px] overflow-hidden rounded-lg`}
-        style={{ y: i * 30 }}
+        className={`relative min-w-[530px] h-[450px] overflow-hidden rounded-lg`}
       >
         <motion.div
           className="relative w-full h-full rounded-lg"
-          style={{ scale }}
+          style={{ scale, y: i * 30 }}
         >
           <Image
             src={image || ""}
@@ -184,7 +187,7 @@ const Card = ({
           </motion.div>
         </Pointer>
       </motion.div>
-      <div className="w-full h-[531px] flex flex-col gap-4 pb-5 bg-[#ffffff]">
+      <div className="w-full h-full flex flex-col justify-end gap-4 bg-[#ffffff]">
         <div className="flex items-center gap-4 mt-auto">
           {medal && (
             <Image src={"/medal-3.svg"} width={20} height={20} alt="medal" />
@@ -194,7 +197,7 @@ const Card = ({
           </p>
         </div>
         <h1 className="text-2xl font-bold">{title}</h1>
-        <p className="text-sm text-[#333333] leading-[31px]">{desc}</p>
+        <p className="text-sm text-[#333333] leading-[25px]">{desc}</p>
         <button
           className="flex items-center text-sm font-bold text-[#4BB543]"
           onClick={() => window.open(url, "_blank")}

@@ -45,7 +45,7 @@ const TestimonialCarousel = () => {
   };
 
   return (
-    <div className="bg-[#F7F7FA] h-[500px] lg:h-[425px] w-full max-sm:px-4 flex items-center justify-center relative overflow-hidden">
+    <div className="bg-[#F7F7FA] h-full lg:h-[425px] w-full max-sm:px-4 flex items-center justify-center relative overflow-hidden">
       <AnimatePresence mode="wait" initial={false}>
         <motion.div
           key={activeIndex}
