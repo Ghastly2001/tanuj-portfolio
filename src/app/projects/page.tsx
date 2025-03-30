@@ -7,6 +7,8 @@ import { useSearchParams } from "next/navigation";
 import React, { Suspense, useEffect, useRef, useState } from "react";
 import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
 import RecommendedProjects from "@/components/recommended-projects";
+import Link from "next/link";
+import FadeUp from "@/components/animations/fade-up";
 
 // Wrapper component to handle Suspense
 function ProjectsPageContent() {
@@ -44,40 +46,67 @@ function ProjectsPageContent() {
     }
   }, [category]);
 
+  const pillText =
+    category === "ui_ux"
+      ? "Case Study"
+      : category === "fashion"
+      ? "View Project"
+      : category === "research_project"
+      ? "View Document"
+      : "";
+
   return (
     <div className="max-w-5xl mx-auto mb-[172px] px-4 sm:px-10">
       {category && (
         <div className="flex items-center flex-col-reverse lg:flex-row gap-6 lg:gap-[150px] mt-[112px]">
           <div className="max-w-[650px]">
-            <h1 className="text-[#4BB543] font-bold">
-              {category === "ui_ux"
-                ? category.toUpperCase().replace(/_/g, "-")
-                : category === "fashion"
-                ? "Fashion"
-                : "Research Project"}
-            </h1>
-            <h1 className="mt-[10px] text-3xl font-bold">
-              {categoryProjects.length} Projects
-            </h1>
-            <p className="mt-6">
-              {projects[category as keyof typeof projects].heading}
-            </p>
-            <button className="border border-[#D5D5D5] py-2 px-5 rounded-md font-bold hover:bg-[#0A0A0A] hover:text-white transition-all mt-6">
-              View All Works
-            </button>
+            <FadeUp>
+              <h1 className="text-[#4BB543] font-bold">
+                {category === "ui_ux"
+                  ? category.toUpperCase().replace(/_/g, "-")
+                  : category === "fashion"
+                  ? "Fashion"
+                  : "Documentations"}
+              </h1>
+            </FadeUp>
+            <FadeUp delay={0.1}>
+              <h1 className="mt-[10px] text-3xl font-bold">
+                0{categoryProjects.length} Projects
+              </h1>
+            </FadeUp>
+            <FadeUp delay={0.2}>
+              <p className="mt-6">
+                {projects[category as keyof typeof projects].heading}
+              </p>
+            </FadeUp>
+            <Link href={"https://www.behance.net/tanujpandey2"}>
+              <FadeUp delay={0.3}>
+                <button className="border border-[#D5D5D5] py-2 px-5 rounded-md font-bold hover:bg-[#0A0A0A] hover:text-white transition-all mt-6">
+                  View All Works
+                </button>
+              </FadeUp>
+            </Link>
           </div>
-          <div className="relative w-[238px] h-[156px] lg:w-[400px] lg:h-[280px]">
+          <FadeUp
+            delay={0.3}
+            className="relative w-[238px] h-[156px] lg:w-[400px] lg:h-[280px]"
+          >
             <Image
               src={projects[category as keyof typeof projects].image}
               alt={category}
               fill
             />
-          </div>
+          </FadeUp>
         </div>
       )}
       {categoryProjects.length > 0 &&
         categoryProjects.map((project, index) => (
-          <ProjectCard {...project} key={project.title} i={index} />
+          <ProjectCard
+            {...project}
+            key={project.title}
+            i={index}
+            pillText={pillText}
+          />
         ))}
     </div>
   );
@@ -105,6 +134,7 @@ function ProjectCard({
   medal,
   desc,
   i,
+  pillText,
 }: {
   image?: string;
   badge?: string;
@@ -113,6 +143,7 @@ function ProjectCard({
   medal?: boolean;
   desc?: string;
   i: number;
+  pillText: string;
 }) {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -132,6 +163,7 @@ function ProjectCard({
         url={url}
         scale={scale}
         i={i}
+        pillText={pillText}
       />
     </div>
   );
@@ -148,6 +180,7 @@ const Card = ({
   desc,
   scale,
   i,
+  pillText,
 }: {
   image?: string;
   badge?: string;
@@ -157,21 +190,22 @@ const Card = ({
   desc?: string;
   scale?: any;
   i: number;
+  pillText: string;
 }) => {
   return (
     <div className="w-full flex flex-col lg:flex-row items-end justify-between gap-8">
       <motion.div
-        className={`relative min-w-full h-[300px] lg:min-w-[530px] lg:h-[450px] overflow-hidden rounded-lg`}
+        className={`relative min-w-full h-[300px] lg:min-w-[530px] lg:h-[450px] overflow-hidden rounded-xl`}
       >
         <motion.div
-          className="relative w-full h-full rounded-lg"
+          className="relative w-full h-full rounded-xl"
           style={{ scale, y: i * 30 }}
         >
           <Image
             src={image || ""}
             fill
             alt="bridging-the-gap"
-            className="object-cover rounded-lg"
+            className="object-cover rounded-xl"
           />
         </motion.div>
         <Pointer>
@@ -182,7 +216,7 @@ const Card = ({
             className="cursor-not-allowed"
           >
             <span className="bg-white/70 text-base font-semibold me-2 px-5 py-3 rounded-full">
-              View Project
+              {pillText}
             </span>
           </motion.div>
         </Pointer>

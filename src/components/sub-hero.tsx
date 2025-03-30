@@ -36,7 +36,12 @@ const SubHero = () => {
           <FadeUp delay={0.15}>
             <p className="text-start lg:text-center max-sm:text-base">
               Recently, crafted my experiences at{" "}
-              <span className="text-[#4BB543] font-medium">ONDC.</span>
+              <span
+                className="text-[#4BB543] font-medium cursor-pointer"
+                onClick={() => window.open("https://ondc.org/")}
+              >
+                ONDC.
+              </span>
             </p>
           </FadeUp>
         </div>

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import ProjectTypeCard from "./project-type-card";
 import Link from "next/link";
@@ -67,8 +68,15 @@ const ProjectsSection = () => {
         <div className="relative mt-[65px] w-full rounded-[10px]  overflow-hidden bg-[#4BB543] mb-[80px]">
           <div className="w-[calc(100%-5px)] h-full bg-[#f1f9f0] text-sm  py-3 px-10 text-[#4BB543] rounded-l-[10px] ml-auto leading-[24px]">
             These are the best products I&apos;ve worked. Also click on the{" "}
-            <span className="font-bold">View All Designs Works</span> button for
-            behance portfolio.
+            <span
+              className="font-bold cursor-pointer"
+              onClick={() =>
+                window.open("https://www.behance.net/tanujpandey2")
+              }
+            >
+              View All Designs Works
+            </span>{" "}
+            button for behance portfolio.
           </div>
         </div>
       </FadeUp>

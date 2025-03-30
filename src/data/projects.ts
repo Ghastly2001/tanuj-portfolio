@@ -83,14 +83,14 @@ export const projects = {
         medal: false,
         desc: `"Garbella" is a comprehensive fashion forecasting project that predicts key trends for the Spring/Summer 2025 season. This project explores the convergence of bold, contemporary styles with timeless elegance, focusing on how global influences, sustainability, and innovative materials will shape the upcoming fashion landscape. The forecast highlights colors, patterns, fabrics, silhouettes, and accessories that will define the season.`,
       },
-      {
-        image: "/fashion5.svg",
-        badge: "Academic Project",
-        title: "SRIJAN",
-        url: "#",
-        medal: false,
-        desc: "This project is an extension of the Craft Research Development (CRD) study on Sujani, conducted as part of the curriculum in a Bihar craft cluster. It expands on the initial research and includes the curation and development of a range plan. The project was carried out by a group of six students from NIFT Patna.",
-      },
+      // {
+      //   image: "/fashion5.svg",
+      //   badge: "Academic Project",
+      //   title: "SRIJAN",
+      //   url: "#",
+      //   medal: false,
+      //   desc: "This project is an extension of the Craft Research Development (CRD) study on Sujani, conducted as part of the curriculum in a Bihar craft cluster. It expands on the initial research and includes the curation and development of a range plan. The project was carried out by a group of six students from NIFT Patna.",
+      // },
     ],
   },
   research_project: {
