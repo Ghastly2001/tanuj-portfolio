@@ -17,7 +17,7 @@ export default function Home() {
         <HeroSection />
       </div>
       <SubHero />
-      <div className="max-w-[1440px] mx-auto" id="projects">
+      <div className="max-w-[1440px] mx-auto">
         <ProjectsSection />
       </div>
       <ExpertiseSection />

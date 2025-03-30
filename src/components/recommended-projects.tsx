@@ -6,7 +6,6 @@ const RecommendedProjects = ({ category }: { category: string }) => {
   const updatedProjectsList = projects.filter(
     (project) => project.url !== category
   );
-  console.log("Updterd proje: ", updatedProjectsList);
   return (
     <div className="w-screen bg-[#F7F7FA] mb-4">
       <div className="max-w-5xl mx-auto px-4 sm:px-10 py-14 flex flex-col items-center">

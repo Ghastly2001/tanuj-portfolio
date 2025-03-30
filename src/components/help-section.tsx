@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import FadeUp from "./animations/fade-up";
 
 const HelpSection = () => {
   const data = [
@@ -27,18 +28,21 @@ const HelpSection = () => {
   return (
     <div className="bg-[#F7F7FA] h-full py-20 lg:py-0 lg:h-[600px] w-full px-8  ">
       <div className="max-w-5xl mx-auto h-full flex items-center justify-center flex-col px-4 sm:px-10">
-        <h1 className="font-bold text-3xl w-full text-start lg:text-center">
-          Passion Meets{" "}
-          <span className="font-bold text-[#4BB543]">Recognition</span>
-        </h1>
+        <FadeUp>
+          <h1 className="font-bold text-3xl w-full text-start lg:text-center">
+            Passion Meets{" "}
+            <span className="font-bold text-[#4BB543]">Recognition</span>
+          </h1>
+        </FadeUp>
         <div className="grid grid-cols-1 lg:grid-cols-2 mt-[40px] lg:mt-[67px] gap-6">
           {data.map((item, index) => (
-            <GridCard
-              desc={item.desc}
-              title={item.title}
-              key={index}
-              position={item.position}
-            />
+            <FadeUp delay={index * 0.1} key={index}>
+              <GridCard
+                desc={item.desc}
+                title={item.title}
+                position={item.position}
+              />
+            </FadeUp>
           ))}
         </div>
       </div>

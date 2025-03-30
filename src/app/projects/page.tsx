@@ -159,9 +159,9 @@ const Card = ({
   i: number;
 }) => {
   return (
-    <div className="w-full flex items-end justify-between gap-8">
+    <div className="w-full flex flex-col lg:flex-row items-end justify-between gap-8">
       <motion.div
-        className={`relative min-w-[530px] h-[450px] overflow-hidden rounded-lg`}
+        className={`relative min-w-full h-[300px] lg:min-w-[530px] lg:h-[450px] overflow-hidden rounded-lg`}
       >
         <motion.div
           className="relative w-full h-full rounded-lg"

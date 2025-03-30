@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import FadeUp from "./animations/fade-up";
 
 const testimonials = [
   {
@@ -34,7 +35,7 @@ const TestimonialCarousel = () => {
     const interval = setInterval(() => {
       setDirection("right");
       setActiveIndex((prev) => (prev + 1) % testimonials.length);
-    }, 5000); // Change testimonial every 5 seconds
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [activeIndex]);
@@ -56,42 +57,48 @@ const TestimonialCarousel = () => {
           className="absolute w-full px-4"
         >
           <div className="w-5xl h-[232px] mx-auto flex justify-center sm:px-10 px-4 mb-16 ">
-            <Image
-              src={"/quote-left.svg"}
-              width={100}
-              height={62}
-              alt="quote"
-              className="mb-auto hidden lg:block"
-            />
-            <div className="w-[780px] px-8 lg:px-16">
-              <p className="text-center leading-[32px] text-[16px] text-black/[0.78]">
-                {testimonials[activeIndex].text}
-              </p>
-              <h1 className="font-bold text-center mt-[16px]">
-                {testimonials[activeIndex].author}
-              </h1>
-              <p className="text-center font-semibold text-black/[0.78] mt-1">
-                ({testimonials[activeIndex].role})
-              </p>
-              {testimonials[activeIndex].company && (
-                <p className="text-center text-black/[0.78] mt-2">
-                  {testimonials[activeIndex].company}
+            <FadeUp>
+              <Image
+                src={"/quote-left.svg"}
+                width={100}
+                height={62}
+                alt="quote"
+                className="mb-auto  lg:block"
+              />
+            </FadeUp>
+            <FadeUp delay={0.1}>
+              <div className="w-[780px] px-8 lg:px-16">
+                <p className="text-center leading-[32px] text-[16px] text-black/[0.78]">
+                  {testimonials[activeIndex].text}
                 </p>
-              )}
-            </div>
-            <Image
-              src={"/quote-right.svg"}
-              width={100}
-              height={62}
-              alt="quote"
-              className="mt-auto hidden lg:block"
-            />
+                <h1 className="font-bold text-center mt-[16px]">
+                  {testimonials[activeIndex].author}
+                </h1>
+                <p className="text-center font-semibold text-black/[0.78] mt-1">
+                  ({testimonials[activeIndex].role})
+                </p>
+                {testimonials[activeIndex].company && (
+                  <p className="text-center text-black/[0.78] mt-2">
+                    {testimonials[activeIndex].company}
+                  </p>
+                )}
+              </div>
+            </FadeUp>
+            <FadeUp delay={0.2}>
+              <Image
+                src={"/quote-right.svg"}
+                width={100}
+                height={62}
+                alt="quote"
+                className="mt-auto  lg:block"
+              />
+            </FadeUp>
           </div>
         </motion.div>
       </AnimatePresence>
 
       {/* Navigation Dots */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 space-x-2 hidden lg:flex">
+      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 space-x-2  lg:flex">
         {testimonials.map((_, index) => (
           <button
             key={index}

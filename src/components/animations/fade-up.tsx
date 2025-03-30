@@ -6,10 +6,12 @@ const FadeUp = ({
   children,
   delay,
   duration,
+  className,
 }: {
   children: ReactNode;
   delay?: number;
   duration?: number;
+  className?: string;
 }) => {
   const ref = useRef(null);
   const isInView = useInView(ref);
@@ -25,11 +27,12 @@ const FadeUp = ({
       ref={ref}
       transition={{ delay, type: "spring", duration }}
       variants={{
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0 },
+        hidden: { opacity: 0, y: 20, filter: "blur(1px)" },
+        visible: { opacity: 1, y: 0, filter: "blur(0px)" },
       }}
       animate={visible ? "visible" : "hidden"}
       initial={"hidden"}
+      className={className}
     >
       {children}
     </motion.div>

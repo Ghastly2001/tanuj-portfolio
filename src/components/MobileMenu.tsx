@@ -37,7 +37,7 @@ const MobileMenu = ({ className, links }: IMobileMenu) => {
     </motion.div>
   ));
   return (
-    <>
+    <div className="lg:hidden ">
       {opened ? (
         <X onClick={() => setOpened(!opened)} />
       ) : (
@@ -72,7 +72,7 @@ const MobileMenu = ({ className, links }: IMobileMenu) => {
           </div>
         </motion.div>
       </motion.div>
-    </>
+    </div>
   );
 };
 
