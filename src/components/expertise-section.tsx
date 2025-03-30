@@ -45,7 +45,7 @@ const ExpertiseSection = () => {
             <Image src={"/person-thinking.svg"} fill alt="expertise" />
           </FadeUp>
         </div>
-        <div className="w-full flex flex-col lg:flex-row items-start lg:items-center justify-between lg:gap-10 gap-8">
+        <div className="w-full flex flex-col lg:flex-row items-start lg:items-center justify-between lg:gap-10 gap-8 mt-12 lg:mt-0">
           <FadeUp>
             <div className="flex flex-row lg:flex-col gap-4">
               <Image
