@@ -8,7 +8,6 @@ import HeroSection from "@/components/hero-section";
 import MoreAboutSection from "@/components/more-about-section";
 import ProjectsSection from "@/components/projects-section";
 import TestimonialCarousel from "@/components/quote-section";
-import QuoteSection from "@/components/quote-section";
 import SubHero from "@/components/sub-hero";
 export default function Home() {
   return (

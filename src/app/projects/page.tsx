@@ -47,7 +47,7 @@ function ProjectsPageContent() {
   return (
     <div className="max-w-5xl mx-auto mb-[172px] px-4 sm:px-10">
       {category && (
-        <div className="flex items-center gap-[150px] mt-[112px]">
+        <div className="flex items-center flex-col-reverse lg:flex-row gap-6 lg:gap-[150px] mt-[112px]">
           <div className="max-w-[650px]">
             <h1 className="text-[#4BB543] font-bold">
               {category === "ui_ux"
@@ -66,7 +66,7 @@ function ProjectsPageContent() {
               View All Works
             </button>
           </div>
-          <div className="relative w-[400px] h-[280px]">
+          <div className="relative w-[238px] h-[156px] lg:w-[400px] lg:h-[280px]">
             <Image
               src={projects[category as keyof typeof projects].image}
               alt={category}

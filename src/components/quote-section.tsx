@@ -46,7 +46,7 @@ const TestimonialCarousel = () => {
   };
 
   return (
-    <div className="bg-[#F7F7FA] h-full lg:h-[425px] w-full max-sm:px-4 flex items-center justify-center relative overflow-hidden">
+    <div className="bg-[#F7F7FA] lg:h-[425px] w-full max-sm:px-4 flex items-center justify-center relative overflow-hidden py-60">
       <AnimatePresence mode="wait" initial={false}>
         <motion.div
           key={activeIndex}
@@ -66,24 +66,22 @@ const TestimonialCarousel = () => {
                 className="mb-auto  lg:block"
               />
             </FadeUp>
-            <FadeUp delay={0.1}>
-              <div className="w-[780px] px-8 lg:px-16">
-                <p className="text-center leading-[32px] text-[16px] text-black/[0.78]">
-                  {testimonials[activeIndex].text}
+            <div className="w-[780px] px-2 lg:px-16">
+              <p className="text-center lg:leading-[32px] text-sm lg:text-[16px] text-black/[0.78]">
+                {testimonials[activeIndex].text}
+              </p>
+              <h1 className="font-bold text-center mt-4 lg:mt-[16px]">
+                {testimonials[activeIndex].author}
+              </h1>
+              <p className="text-center font-semibold text-black/[0.78] mt-1">
+                ({testimonials[activeIndex].role})
+              </p>
+              {testimonials[activeIndex].company && (
+                <p className="text-center text-black/[0.78] mt-1 lg:mt-2">
+                  {testimonials[activeIndex].company}
                 </p>
-                <h1 className="font-bold text-center mt-[16px]">
-                  {testimonials[activeIndex].author}
-                </h1>
-                <p className="text-center font-semibold text-black/[0.78] mt-1">
-                  ({testimonials[activeIndex].role})
-                </p>
-                {testimonials[activeIndex].company && (
-                  <p className="text-center text-black/[0.78] mt-2">
-                    {testimonials[activeIndex].company}
-                  </p>
-                )}
-              </div>
-            </FadeUp>
+              )}
+            </div>
             <FadeUp delay={0.2}>
               <Image
                 src={"/quote-right.svg"}
@@ -98,7 +96,7 @@ const TestimonialCarousel = () => {
       </AnimatePresence>
 
       {/* Navigation Dots */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 space-x-2  lg:flex">
+      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 space-x-2 hidden lg:flex">
         {testimonials.map((_, index) => (
           <button
             key={index}
@@ -121,7 +119,7 @@ const TestimonialCarousel = () => {
             prev === 0 ? testimonials.length - 1 : prev - 1
           );
         }}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 "
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 hidden lg:block"
         aria-label="Previous testimonial"
       >
         ←
@@ -131,7 +129,7 @@ const TestimonialCarousel = () => {
           setDirection("right");
           setActiveIndex((prev) => (prev + 1) % testimonials.length);
         }}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 hidden lg:block"
         aria-label="Next testimonial"
       >
         →

@@ -4,8 +4,8 @@ import FadeUp from "./animations/fade-up";
 
 const MoreAboutSection = () => {
   return (
-    <div className="max-w-5xl h-[630px] mx-auto my-20">
-      <div className="flex flex-col-reverse lg:flex-row items-center justify-between h-full px-8 sm:px-10 gap-4 ">
+    <div className="max-w-5xl h-full lg:h-[630px] mx-auto my-16">
+      <div className="flex flex-col-reverse lg:flex-row items-center justify-between h-full px-8 sm:px-10 gap-16 ">
         <div className="w-full">
           <FadeUp>
             <p className="text-[#4BB543] text-xs font-medium ">MORE ABOUT ME</p>
@@ -38,7 +38,10 @@ const MoreAboutSection = () => {
             </p>
           </FadeUp>
         </div>
-        <FadeUp delay={0.3} className="relative w-1/2 h-1/2 ">
+        <FadeUp
+          delay={0.3}
+          className="relative w-[204px] h-[142px] lg:w-1/2 lg:h-1/2 "
+        >
           <Image src={"tea-window.svg"} fill alt="tea" />
         </FadeUp>
       </div>
