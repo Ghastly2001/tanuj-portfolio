@@ -3,12 +3,12 @@ import FadeUp from "@/components/animations/fade-up";
 import { Pointer } from "@/components/magicui/pointer";
 import RecommendedProjects from "@/components/recommended-projects";
 import { projects } from "@/data/projects";
+import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { Suspense, useEffect, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { Suspense, useEffect, useState } from "react";
 
 function ProjectsPageContent() {
   const searchParams = useSearchParams();
