@@ -55,7 +55,14 @@ const ExpertiseSection = () => {
                 alt="figma"
                 className="h-1/2 hidden lg:block"
               />
-              <div className="flex flex-col gap-2 lg:gap-4">
+              <Image
+                src={"/figma-mobile.svg"}
+                width={23}
+                height={35}
+                alt="figma"
+                className="h-1/2 lg:hidden block"
+              />
+              <div className="flex flex-col gap-1 lg:gap-4">
                 <h1 className="font-bold text-xl">Figma</h1>
                 <p className="text-black/80 leading-[28px] text-sm ">
                   3+ years of experience with Figma, I&apos;m now pretty much a
@@ -65,7 +72,7 @@ const ExpertiseSection = () => {
             </div>
           </FadeUp>
           <FadeUp delay={0.1}>
-            <div className="flex flex-col gap-2 lg:gap-4">
+            <div className="flex flex-row lg:flex-col gap-4">
               <Image
                 src={"/adobe-suite.svg"}
                 width={64}
@@ -73,7 +80,14 @@ const ExpertiseSection = () => {
                 alt="figma"
                 className="h-1/2 hidden lg:block"
               />
-              <div className="flex flex-col gap-4">
+              <Image
+                src={"/adobe-mobile.svg"}
+                width={23}
+                height={35}
+                alt="figma"
+                className="h-1/2 lg:hidden block"
+              />
+              <div className="flex flex-col gap-1">
                 <h1 className="font-bold text-xl">Adobe Suite</h1>
                 <p className="text-black/80 leading-[28px] text-sm ">
                   Using adobe suit for last 3+ years. Fav: Illustrator,
@@ -83,7 +97,7 @@ const ExpertiseSection = () => {
             </div>
           </FadeUp>
           <FadeUp delay={0.2}>
-            <div className="flex flex-col gap-2 lg:gap-4">
+            <div className="flex flex-row lg:flex-col gap-4">
               <Image
                 src={"/miro.svg"}
                 width={60}
@@ -91,7 +105,14 @@ const ExpertiseSection = () => {
                 alt="figma"
                 className="h-1/2 hidden lg:block"
               />
-              <div className="flex flex-col gap-2 lg:gap-4">
+              <Image
+                src={"/miro-mobile.svg"}
+                width={23}
+                height={35}
+                alt="figma"
+                className="h-1/2 lg:hidden block"
+              />
+              <div className="flex flex-col gap-1 lg:gap-4">
                 <h1 className="font-bold text-xl">Miro</h1>
                 <p className="text-black/80 leading-[28px] text-sm ">
                   I am an expert in using Miro. Knowledge of JIRA as well.
