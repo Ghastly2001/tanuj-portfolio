@@ -93,7 +93,7 @@ const Navbar = () => {
                         initial={{ x: -10 }}
                         animate={{ x: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="w-40"
+                        className="w-20"
                       >
                         <Link
                           href="/projects?category=ui_ux"
@@ -139,6 +139,7 @@ const Navbar = () => {
                     ? "font-bold"
                     : ""
                 }`}
+                target="_blank"
               >
                 {link.name}
               </Link>

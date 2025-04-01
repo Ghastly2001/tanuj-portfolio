@@ -47,15 +47,6 @@ function ProjectsPageContent() {
     }
   }, [category]);
 
-  const pillText =
-    category === "ui_ux"
-      ? "Case Study"
-      : category === "fashion"
-      ? "View Project"
-      : category === "research_project"
-      ? "View Document"
-      : "";
-
   return (
     <div className="max-w-5xl mx-auto mb-[172px] px-4 sm:px-10">
       {category && (
@@ -106,8 +97,6 @@ function ProjectsPageContent() {
             <ProjectCard
               {...project}
               key={project.title}
-              i={index}
-              pillText={pillText}
               cta_text={project.cta_text}
             />
           </FadeUp>
@@ -139,8 +128,7 @@ function ProjectCard({
   url,
   medal,
   desc,
-  i,
-  pillText,
+
   cta_text,
 }: {
   image?: string;
@@ -149,8 +137,7 @@ function ProjectCard({
   url?: string;
   medal?: boolean;
   desc?: string;
-  i: number;
-  pillText: string;
+
   cta_text: string;
 }) {
   return (
@@ -162,8 +149,6 @@ function ProjectCard({
         medal={medal}
         title={title}
         url={url}
-        i={i}
-        pillText={pillText}
         cta_text={cta_text}
       />
     </div>
@@ -179,8 +164,7 @@ const Card = ({
   url,
   medal,
   desc,
-  i,
-  pillText,
+
   cta_text,
 }: {
   image?: string;
@@ -189,8 +173,7 @@ const Card = ({
   url?: string;
   medal?: boolean;
   desc?: string;
-  i: number;
-  pillText: string;
+
   cta_text: string;
 }) => {
   return (
@@ -209,7 +192,7 @@ const Card = ({
                 className="cursor-not-allowed"
               >
                 <span className="bg-white/70 text-base font-semibold me-2 px-5 py-3 rounded-full">
-                  {pillText}
+                  {cta_text}
                 </span>
               </motion.div>
             </Pointer>

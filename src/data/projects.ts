@@ -132,7 +132,7 @@ export const projects = {
         url: "#",
         medal: false,
         desc: "Abstract of research paper in order to publish in ICORD 2025 which talks about India's cultural significance and  flower market thrives on cultural, spiritual, and daily needs, especially in urban areas with limited green spaces. A study in Patna highlights the importance of flowers in rituals and festivals, suggesting market growth by including native varieties to meet urban demands sustainably.",
-        cta_text: "View Documentation",
+        cta_text: "View Paper",
       },
     ],
   },
