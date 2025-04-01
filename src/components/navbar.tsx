@@ -139,7 +139,9 @@ const Navbar = () => {
                     ? "font-bold"
                     : ""
                 }`}
-                target="_blank"
+                {...(link.name === "Linkedin" || link.name === "Behance"
+                  ? { target: "_blank" }
+                  : {})}
               >
                 {link.name}
               </Link>

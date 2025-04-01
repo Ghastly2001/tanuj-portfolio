@@ -8,7 +8,7 @@ const RecommendedProjects = ({ category }: { category: string }) => {
     (project) => project.url !== category
   );
   return (
-    <div className="w-screen bg-[#F7F7FA] mb-4">
+    <div className="bg-[#F7F7FA] mb-4">
       <div className="max-w-5xl mx-auto px-4 sm:px-10 py-14 flex flex-col items-center">
         <div className="flex items-center md:gap-12 h-full flex-col sm:flex-row gap-12">
           <FadeUp>
