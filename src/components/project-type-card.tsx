@@ -8,11 +8,13 @@ const ProjectTypeCard = ({
   url,
   desc,
   title,
+  recommended,
 }: {
   image: string;
   url: string;
   desc: string;
   title: string;
+  recommended?: boolean;
 }) => {
   return (
     <Link href={`/projects?category=${url}`}>
@@ -26,11 +28,23 @@ const ProjectTypeCard = ({
             className="w-[255px] h-[170px] group-hover:scale-110 transition-all duration-300"
           />
         </div>
-        <div className="w-full">
-          <h1 className="font-bold">{title}</h1>
-          <p className="mt-1 line-clamp-3">{desc}</p>
+        <div
+          className={`w-full ${
+            recommended && "flex flex-col gap-1 items-center"
+          }`}
+        >
+          <h1 className={`font-bold ${recommended && "text-center"}`}>
+            {title}
+          </h1>
+          <p className={`mt-1 line-clamp-3 ${recommended && "text-center"}`}>
+            {desc}
+          </p>
 
-          <div className="flex items-center gap-2 text-[#4BB543] font-bold mt-[16px]">
+          <div
+            className={`flex items-center gap-2 text-[#4BB543] font-bold mt-[16px] ${
+              recommended && "justify-center"
+            }`}
+          >
             View Projects
             <ArrowRight
               className="font-bold group-hover:translate-x-1 transition-all duration-300"

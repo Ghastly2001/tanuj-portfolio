@@ -9,16 +9,6 @@ import {
 } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
-// interface PointerProps extends Omit<HTMLMotionProps<"div">, "ref"> {}
-
-/**
- * A custom pointer component that displays an animated cursor.
- * Add this as a child to any component to enable a custom pointer when hovering.
- * You can pass custom children to render as the pointer.
- *
- * @component
- * @param {PointerProps} props - The component props
- */
 export function Pointer({
   className,
   style,
@@ -29,35 +19,33 @@ export function Pointer({
   const y = useMotionValue(0);
   const [isActive, setIsActive] = useState<boolean>(false);
   const containerRef = useRef<HTMLDivElement>(null);
+  const pointerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (typeof window !== "undefined" && containerRef.current) {
-      // Get the parent element directly from the ref
       const parentElement = containerRef.current.parentElement;
 
       if (parentElement) {
-        // Add cursor-none to parent
+        parentElement.style.position = "relative";
+        parentElement.style.overflow = "hidden";
         parentElement.style.cursor = "none";
 
-        // Add event listeners to parent
         const handleMouseMove = (e: MouseEvent) => {
-          x.set(e.clientX);
-          y.set(e.clientY);
+          const rect = parentElement.getBoundingClientRect();
+          x.set(e.clientX - rect.left);
+          y.set(e.clientY - rect.top);
         };
 
-        const handleMouseEnter = () => {
-          setIsActive(true);
-        };
-
-        const handleMouseLeave = () => {
-          setIsActive(false);
-        };
+        const handleMouseEnter = () => setIsActive(true);
+        const handleMouseLeave = () => setIsActive(false);
 
         parentElement.addEventListener("mousemove", handleMouseMove);
         parentElement.addEventListener("mouseenter", handleMouseEnter);
         parentElement.addEventListener("mouseleave", handleMouseLeave);
 
         return () => {
+          parentElement.style.position = "";
+          parentElement.style.overflow = "";
           parentElement.style.cursor = "";
           parentElement.removeEventListener("mousemove", handleMouseMove);
           parentElement.removeEventListener("mouseenter", handleMouseEnter);
@@ -73,24 +61,16 @@ export function Pointer({
       <AnimatePresence>
         {isActive && (
           <motion.div
-            className="transform-[translate(-50%,-50%)] pointer-events-none fixed z-50"
+            ref={pointerRef}
+            className="pointer-events-none absolute z-50"
             style={{
-              top: y,
-              left: x,
+              x,
+              y,
               ...style,
             }}
-            initial={{
-              scale: 0,
-              opacity: 0,
-            }}
-            animate={{
-              scale: 1,
-              opacity: 1,
-            }}
-            exit={{
-              scale: 0,
-              opacity: 0,
-            }}
+            initial={{ scale: 0, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0, opacity: 0 }}
             {...props}
           >
             {children || (

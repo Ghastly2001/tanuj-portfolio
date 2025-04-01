@@ -1,6 +1,7 @@
 import { projects } from "@/lib/constants";
 import React from "react";
 import ProjectTypeCard from "./project-type-card";
+import FadeUp from "./animations/fade-up";
 
 const RecommendedProjects = ({ category }: { category: string }) => {
   const updatedProjectsList = projects.filter(
@@ -9,21 +10,27 @@ const RecommendedProjects = ({ category }: { category: string }) => {
   return (
     <div className="w-screen bg-[#F7F7FA] mb-4">
       <div className="max-w-5xl mx-auto px-4 sm:px-10 py-14 flex flex-col items-center">
-        <div className="flex items-center md:gap-12 h-full flex-col sm:flex-row gap-12 ">
-          <h1 className="max-w-full lg:max-w-[400px] text-2xl lg:text-3xl font-bold leading-none lg:leading-[32px] text-center">
-            Check out some of the{" "}
-            <span className="text-[#4BB543]">projects</span> I&apos;ve worked on
-          </h1>
+        <div className="flex items-center md:gap-12 h-full flex-col sm:flex-row gap-12">
+          <FadeUp>
+            <h1 className="max-w-full lg:max-w-[400px] text-2xl lg:text-3xl font-bold leading-none lg:leading-[32px] text-center">
+              Check out some of the{" "}
+              <span className="text-[#4BB543]">projects</span> I&apos;ve worked
+              on
+            </h1>
+          </FadeUp>
         </div>
         <div className="mt-[55px] flex lg:flex-row lg:items-center gap-10 justify-between flex-col">
           {updatedProjectsList.map((project, index) => (
-            <ProjectTypeCard
-              key={index}
-              image={project.image}
-              url={project.url}
-              desc={project.desc}
-              title={project.title}
-            />
+            <FadeUp delay={0.1 * index} key={index}>
+              <ProjectTypeCard
+                key={index}
+                image={project.image}
+                url={project.url}
+                desc={project.desc}
+                title={project.title}
+                recommended={true}
+              />
+            </FadeUp>
           ))}
         </div>
       </div>

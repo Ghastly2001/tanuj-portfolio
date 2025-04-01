@@ -30,7 +30,7 @@ const BlackBar = () => {
           </Link>
         </div>
         <div className=" flex items-center gap-4 lg:flex-row flex-col font-medium mt-3">
-          <p className="text-white text-sm">
+          <p className="text-white text-sm lg:hidden">
             Crafted with love 🤍 and lots of chai & coffee ☕
           </p>
           <p className="mx-auto text-white text-sm">

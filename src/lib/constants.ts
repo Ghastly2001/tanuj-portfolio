@@ -12,7 +12,7 @@ export const projects = [
     desc: "Focused on creating innovative designs that merge aesthetics with functionality, reflecting contemporary trends.",
   },
   {
-    title: "Research Project",
+    title: "Documents",
     image: "research-project",
     url: "research_project",
     desc: "Documented traditional crafts and practices, highlighting their cultural value and craftsmanship and research paper.",
