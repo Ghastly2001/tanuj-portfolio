@@ -1,19 +1,12 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import { useState } from "react";
 // import { Menu } from "lucide-react";
-import { usePathname, useSearchParams } from "next/navigation";
-import { useRouter } from "next/navigation";
+import { AnimatePresence, motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
+import { usePathname, useRouter } from "next/navigation";
 import MobileMenu from "./MobileMenu";
-import {
-  HoveredLink,
-  Menu,
-  MenuItem,
-  ProductItem,
-} from "../components/navbar-menu";
-import { motion, AnimatePresence } from "framer-motion";
-import { ArrowDown, ArrowRight, ChevronDown, MoveDownIcon } from "lucide-react";
 
 const Navbar = () => {
   const router = useRouter();

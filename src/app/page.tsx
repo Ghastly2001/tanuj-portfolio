@@ -1,7 +1,5 @@
-import FadeUp from "@/components/animations/fade-up";
 import AvailableSection from "@/components/available-section";
 import BringSection from "@/components/bring-section";
-import DownloadResume from "@/components/download-resume";
 import ExpertiseSection from "@/components/expertise-section";
 import HelpSection from "@/components/help-section";
 import HeroSection from "@/components/hero-section";

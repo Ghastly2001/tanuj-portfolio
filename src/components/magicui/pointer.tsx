@@ -6,10 +6,10 @@ import {
   HTMLMotionProps,
   motion,
   useMotionValue,
-} from "motion/react";
+} from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
-interface PointerProps extends Omit<HTMLMotionProps<"div">, "ref"> {}
+// interface PointerProps extends Omit<HTMLMotionProps<"div">, "ref"> {}
 
 /**
  * A custom pointer component that displays an animated cursor.
@@ -24,7 +24,7 @@ export function Pointer({
   style,
   children,
   ...props
-}: PointerProps): JSX.Element {
+}: Omit<HTMLMotionProps<"div">, "ref">): JSX.Element {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const [isActive, setIsActive] = useState<boolean>(false);

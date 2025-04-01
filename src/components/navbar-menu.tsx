@@ -1,7 +1,7 @@
 "use client";
-import React from "react";
+import React, { ReactNode } from "react";
 import { motion } from "motion/react";
-import Link from "next/link";
+import Link, { LinkProps } from "next/link";
 import Image from "next/image";
 
 const transition = {
@@ -106,9 +106,13 @@ export const ProductItem = ({
   );
 };
 
-export const HoveredLink = ({ children, ...rest }: any) => {
+export const HoveredLink = ({
+  children,
+  ...rest
+}: LinkProps &
+  React.AnchorHTMLAttributes<HTMLAnchorElement> & { children: ReactNode }) => {
   return (
-    <Link {...rest} className="text-neutral-200 ">
+    <Link {...rest} className="text-neutral-200">
       {children}
     </Link>
   );
