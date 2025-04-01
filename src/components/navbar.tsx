@@ -57,9 +57,10 @@ const Navbar = () => {
                 className="relative "
                 onMouseEnter={() => setActive("Projects")}
                 onMouseLeave={() => setActive(null)}
+                onClick={() => setActive("Projects")}
               >
-                <Link
-                  href={link.href}
+                <div
+                  // href={link.href}
                   className={`px-6 text-sm flex items-center${
                     pathname === link.href || pathname === link.href.slice(0, 9)
                       ? "font-bold"
@@ -73,7 +74,7 @@ const Navbar = () => {
                     }`}
                     size={16}
                   />
-                </Link>
+                </div>
 
                 <AnimatePresence>
                   {active === "Projects" && (
@@ -122,7 +123,7 @@ const Navbar = () => {
                           href="/projects?category=research_project"
                           className="text-black font-medium"
                         >
-                          Research Projects
+                          Documents
                         </Link>
                       </motion.div>
                     </motion.div>
