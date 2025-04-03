@@ -36,7 +36,7 @@ const AvailableSection = () => {
           </Link>
         </FadeUp>
         <FadeUp delay={0.5}>
-          <Link href="https://www.linkedin.com/in/tanuj-pandey-0303/">
+          <Link href="https://www.linkedin.com/in/tanuj-pandey-55258223a/">
             <Image
               src={"/linkedin.svg"}
               width={36}
