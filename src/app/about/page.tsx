@@ -74,7 +74,7 @@ const page = () => {
         </div>
 
         {/* Right Image Section */}
-        <FadeUp className="w-full sm:w-[500px] h-[250px] sm:h-[350px] mt-4 sm:mt-auto rounded-xl overflow-hidden">
+        <FadeUp className="w-full sm:w-[500px] h-[250px] sm:h-[350px] mt-4 sm:mt-auto rounded-xl overflow-hidden hidden lg:block">
           <Image src={"/about-hero.svg"} fill alt="about-hero" />
         </FadeUp>
       </div>
