@@ -33,12 +33,14 @@ const HeroSection = () => {
                 href="/resume.pdf"
                 download={true}
                 className="border border-[#D5D5D5] lg:py-3.5 py-3 px-10 rounded-md font-bold hover:bg-[#0A0A0A] hover:text-white transition-all w-full lg:w-auto text-center"
+                target="_blank"
               >
                 Resume
               </Link>
               <Link
                 className="border border-[#D5D5D5] lg:py-3.5 py-3 px-10 rounded-md font-bold hover:bg-[#0A0A0A] hover:text-white transition-all whitespace-nowrap w-full lg:w-auto text-center"
                 href={"mailto:tanujpandey0303@gmail.com"}
+                target="_blank"
               >
                 E-Mail
               </Link>

@@ -32,6 +32,7 @@ const ProjectTypeCard = ({
             className="w-[255px] h-[170px] group-hover:scale-110 transition-all duration-300"
           />
         </div>
+
         <div
           className={`w-full ${
             recommended && "flex flex-col gap-1 items-center"
@@ -40,9 +41,7 @@ const ProjectTypeCard = ({
           <h1 className={`font-bold ${recommended && "text-center"}`}>
             {title}
           </h1>
-          <p className={`mt-1 line-clamp-3 ${recommended && "text-center"}`}>
-            {desc}
-          </p>
+          <p className={`mt-1  ${recommended && "text-center"}`}>{desc}</p>
 
           <div
             className={`flex items-center gap-2 text-[#4BB543] font-bold mt-[16px] ${
