@@ -18,13 +18,13 @@ const HeroSection = () => {
               & your go-to
             </p>
           </FadeUp>
-          <FadeUp delay={0.1}>
+          <FadeUp delay={0.1} className="flex flex-col gap-2">
             <div className="text-5xl font-bold tracking-tight max-w-[400px] max-sm:text-3xl leading-[60px]">
               Fashion &<div>UI-UX Designer</div>
             </div>
-            <p className="text-sm font-medium">
-              for startups to large organizations, let’s transform complex
-              design problems into simple solutions.
+            <p className="text-[16px] font-medium">
+              enjoy turning messy, real-world problems into design that makes
+              sense and makes things easier for people.
             </p>
           </FadeUp>
           <FadeUp delay={0.2}>
@@ -47,7 +47,7 @@ const HeroSection = () => {
             </div>
           </FadeUp>
           <FadeUp delay={0.25}>
-            <p className="text-[#333333] text-xs">
+            <p className="text-[#333333] text-[13px]">
               As a student, I&apos;ve developed strong independent and
               team-working skills, and now I&apos;m ready to contribute my
               expertise to a company.

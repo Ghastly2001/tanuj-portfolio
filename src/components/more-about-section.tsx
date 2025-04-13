@@ -18,23 +18,24 @@ const MoreAboutSection = () => {
           </FadeUp>
           <FadeUp delay={0.2}>
             <p className="leading-[28px] text-sm  text-[#333333] mt-[34px]">
-              I&apos;m Tanuj Pandey, an agile and collaborative designer who
-              isn&apos;t afraid to take risks. I thrive in dynamic environments
-              that require me to step out of my comfort zone and challenge me to
-              grow. As a self-taught Fashion and UX designer, I take ownership
-              of my work and don&apos;t let roles define what is expected of me.
+              I&apos;m Tanuj Pandey, a designer working across Fashion and UX. I
+              enjoy learning through doing and being part of work that pushes me
+              to think differently and grow with every step.
             </p>
           </FadeUp>
           <FadeUp delay={0.3}>
             <p className="leading-[28px]  text-sm text-[#333333] mt-[28px]">
-              When I&apos;m not immersed in work, you can find me exploring new
-              cities with a camera in my hand. &apos;s about balance, and
-              I&apos;m all about embracing every aspect of it.
+              Design, for me, is about solving real problems and creating
+              experiences that are clear, useful, and honest — whether it&apos;s
+              a garment or a digital product. I care about how things look,
+              feel, and function, and I pay close attention to the small details
+              that bring it all together.
             </p>
           </FadeUp>
           <FadeUp delay={0.4}>
             <p className="leading-[28px] text-sm  text-[#333333] mt-[28px]">
-              I believe in waking up each day eager to make a difference!
+              I like working in fast-paced environments where I can stay
+              curious, take initiative, and keep learning along the way.
             </p>
           </FadeUp>
         </div>

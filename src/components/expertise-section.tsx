@@ -6,7 +6,7 @@ const ExpertiseSection = () => {
   return (
     <div className="bg-[#F7F7FA] h-full lg:h-[700px] w-full max-sm:px-4 max-sm:py-20  flex flex-col items-center justify-center">
       <div className="max-w-5xl mx-auto px-4 sm:px-10">
-        <div className="relative w-full flex h-[300px] items-start lg:items-center">
+        <div className="relative w-full flex h-[260px] lg:h-[300px] items-start lg:items-center">
           <div className="w-full mb-auto flex flex-col gap-5">
             <FadeUp>
               {" "}
@@ -18,12 +18,19 @@ const ExpertiseSection = () => {
                 in these tools.
               </h1>
             </FadeUp>
-            <FadeUp>
+            <FadeUp className="flex">
               <h1 className="font-bold text-xl lg:text-3xl w-full lg:hidden">
                 Skilled in industry-leading software, I have{" "}
                 <span className="text-[#4BB543]">expertise</span> in these
                 tools.
               </h1>
+              <FadeUp className=" w-[250px] relative  lg:hidden -top-4 ">
+                <Image
+                  src={"/person-thinking-mobile.svg"}
+                  fill
+                  alt="expertise"
+                />
+              </FadeUp>
             </FadeUp>
 
             <FadeUp delay={0.1}>
@@ -39,9 +46,6 @@ const ExpertiseSection = () => {
             delay={0.1}
             className="relative w-[500px] h-[400px] mb-24  hidden lg:block"
           >
-            <Image src={"/person-thinking.svg"} fill alt="expertise" />
-          </FadeUp>
-          <FadeUp className=" w-[250px] h-[200px] relative  lg:hidden -top-16 ">
             <Image src={"/person-thinking.svg"} fill alt="expertise" />
           </FadeUp>
         </div>

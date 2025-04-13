@@ -18,14 +18,11 @@ const AvailableSection = () => {
       </div>
       <div className="w-full flex flex-col items-center justify-center  px-8 lg:px-0">
         <FadeUp delay={0.2}>
-          <p className="text-[#4BB543] text-lg font-semibold text-center">
-            I&apos;m available for full-time roles & freelance projects.
-          </p>
-        </FadeUp>
-        <FadeUp delay={0.3}>
-          <p className="text-[#333333] mt-[13px] max-w-[310] text-center">
-            Think carefully since this opportunity will not come again.
-            It&apos;s a tiny world.
+          <p className="text-[#4BB543] text-lg font-semibold text-center leading-[32px]">
+            As an emerging professional, I bring a strong eagerness to learn, a
+            proactive drive to
+            <br /> grow, and a passion for contributing fresh, creative
+            perspectives.
           </p>
         </FadeUp>
       </div>

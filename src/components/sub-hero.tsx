@@ -6,7 +6,7 @@ import FadeUp from "./animations/fade-up";
 const SubHero = () => {
   return (
     <div className="bg-[#F7F7FA] h-full lg:h-[600px] w-fullmax-sm:px-4 py-20 flex items-center justify-center">
-      <div className="flex flex-col items-center justify-between h-full gap-7  px-8  lg:px-0">
+      <div className="flex flex-col items-start lg:items-center justify-between h-full gap-7  px-8  lg:px-0">
         <div className="flex flex-col items-start lg:items-center justify-center h-full gap-7">
           <FadeUp className="flex flex-row lg:flex-col items-center justify-center h-full gap-2 lg:gap-7 -ml-2 lg:ml-0">
             <Image
@@ -46,7 +46,7 @@ const SubHero = () => {
           </FadeUp>
         </div>
         <FadeUp
-          className="lg:flex flex-col items-center justify-center py-3 hidden"
+          className="lg:flex flex-col items-center justify-center py-3"
           delay={0.2}
         >
           <button

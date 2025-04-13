@@ -29,12 +29,13 @@ const page = () => {
                 TANUJ IN OFFICE
               </h1>
             </FadeUp>
+
             <FadeUp delay={0.2}>
               <p className="text-[#333333] leading-[28px] mt-[6px] text-sm">
-                At work, I&apos;m Tanuj—the go-to designer who thrives in a
-                friendly and collaborative environment. With a mix of creativity
-                and camaraderie, I bring ideas to life while keeping the office
-                vibe light and fun!
+                At work, I’m Tanuj—the go-to designer who thrives in a friendly
+                and collaborative environment. With a mix of creativity and
+                camaraderie, I bring ideas to life while keeping the office vibe
+                light and fun!
               </p>
             </FadeUp>
           </div>
@@ -48,13 +49,18 @@ const page = () => {
             </FadeUp>
             <FadeUp delay={0.4}>
               <p className="text-[#333333] leading-[28px] mt-[6px] text-sm">
-                I&apos;ve spent the last three years learning design and gained
-                a year of hands-on experience through an internship. My work has
-                been appreciated on various design platforms, which feels
-                amazing! When I&apos;m not designing, you&apos;ll find me
-                exploring new cities with a camera, capturing moments and
-                memories. <br />I believe in starting every day with excitement
-                and the drive to make a difference!
+                I’ve always loved spending time in the kitchen or getting lost
+                in a game of chess. There’s a calmness in both — one fills the
+                home with warmth, the other keeps the mind sharp. Cooking,
+                especially, has always been close to my heart. It’s been my
+                comfort zone since childhood. I’m also super curious about
+                Indian crafts there’s just something special about knowing where
+                I come from. Whether it’s work or life, I like keeping things a
+                little extra neat and organized. I notice the small things and
+                enjoy figuring them out sometimes it makes things easier,
+                sometimes a bit more complicated, but I’ve learned to enjoy
+                both. And whenever I can, I love exploring new cities, soaking
+                in the details and stories each place holds.
               </p>
             </FadeUp>
           </div>

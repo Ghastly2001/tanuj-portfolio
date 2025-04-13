@@ -21,6 +21,7 @@ function ProjectsPageContent() {
       medal: boolean;
       desc: string;
       cta_text: string;
+      rank: number;
     }[]
   >([]);
   const category = searchParams.get("category");
@@ -41,6 +42,7 @@ function ProjectsPageContent() {
           medal: boolean;
           desc: string;
           cta_text: string;
+          rank: number;
         }[]
       );
       setCategoryProjects(allProjects);
@@ -81,7 +83,7 @@ function ProjectsPageContent() {
           </div>
           <FadeUp
             delay={0.3}
-            className="relative w-[238px] h-[156px] lg:w-[400px] lg:h-[280px]"
+            className="relative w-[238px] h-[156px] lg:w-[494px] lg:h-[349px]"
           >
             <Image
               src={projects[category as keyof typeof projects].image}
@@ -98,6 +100,7 @@ function ProjectsPageContent() {
               {...project}
               key={project.title}
               cta_text={project.cta_text}
+              rank={project.rank}
             />
           </FadeUp>
         ))}
@@ -128,7 +131,7 @@ function ProjectCard({
   url,
   medal,
   desc,
-
+  rank,
   cta_text,
 }: {
   image?: string;
@@ -137,7 +140,7 @@ function ProjectCard({
   url?: string;
   medal?: boolean;
   desc?: string;
-
+  rank: number;
   cta_text: string;
 }) {
   return (
@@ -150,6 +153,7 @@ function ProjectCard({
         title={title}
         url={url}
         cta_text={cta_text}
+        rank={rank}
       />
     </div>
   );
@@ -164,7 +168,7 @@ const Card = ({
   url,
   medal,
   desc,
-
+  rank,
   cta_text,
 }: {
   image?: string;
@@ -173,7 +177,7 @@ const Card = ({
   url?: string;
   medal?: boolean;
   desc?: string;
-
+  rank: number;
   cta_text: string;
 }) => {
   return (
@@ -206,8 +210,13 @@ const Card = ({
         </motion.div>
         <div className="w-full h-full flex flex-col justify-end gap-4 bg-[#ffffff]">
           <div className="flex items-center gap-4 mt-auto">
-            {medal && (
-              <Image src={"/medal-3.svg"} width={20} height={20} alt="medal" />
+            {medal && rank > 0 && (
+              <Image
+                src={`/medal-${rank}.svg`}
+                width={20}
+                height={20}
+                alt="medal"
+              />
             )}
             <p className="text-xs font-bold bg-[#F7F7FA] px-3 py-2 rounded-full">
               {badge}
