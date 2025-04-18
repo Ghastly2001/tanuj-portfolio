@@ -9,10 +9,10 @@ const BlackBar = () => {
     <div className="w-full h-full lg:h-[80px] bg-black px-4 py-8">
       <div className="max-w-7xl flex-col lg:flex-row flex items-center justify-between mx-auto h-full gap-5">
         <div className="flex gap-7 items-center px-8 invert-0 lg:hidden">
-          <Link href="mailto:tanujpandey0303@gmail.com">
+          <Link href="mailto:tanujpandey0303@gmail.com" target="_blank">
             <Image src={"/mail-light.svg"} width={36} height={33} alt="mail" />
           </Link>
-          <Link href="https://www.linkedin.com/in/tanuj-pandey-0303/">
+          <Link href="https://www.linkedin.com/in/tanuj-pandey-55258223a/" target="_blank">
             <Image
               src={"/linkedin-light.svg"}
               width={36}
@@ -20,7 +20,7 @@ const BlackBar = () => {
               alt="linkedin"
             />
           </Link>
-          <Link href="https://www.behance.net/tanujpandey2">
+          <Link href="https://www.behance.net/tanujpandey2" target="_blank">
             <Image
               src={"/behance-light.svg"}
               width={36}

@@ -28,12 +28,12 @@ const AvailableSection = () => {
       </div>
       <div className="lg:flex gap-7 items-center px-8 hidden">
         <FadeUp delay={0.4}>
-          <Link href="mailto:tanujpandey0303@gmail.com">
+          <Link href="mailto:tanujpandey0303@gmail.com" target="_blank">
             <Image src={"/mail.svg"} width={36} height={33} alt="mail" />
           </Link>
         </FadeUp>
         <FadeUp delay={0.5}>
-          <Link href="https://www.linkedin.com/in/tanuj-pandey-55258223a/">
+          <Link href="https://www.linkedin.com/in/tanuj-pandey-55258223a/" target="_blank">
             <Image
               src={"/linkedin.svg"}
               width={36}
@@ -43,7 +43,7 @@ const AvailableSection = () => {
           </Link>
         </FadeUp>
         <FadeUp delay={0.6}>
-          <Link href="https://www.behance.net/tanujpandey2">
+          <Link href="https://www.behance.net/tanujpandey2" target="_blank">
             <Image src={"/behance.svg"} width={36} height={33} alt="behance" />
           </Link>
         </FadeUp>
