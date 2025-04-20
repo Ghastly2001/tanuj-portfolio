@@ -5,6 +5,16 @@ export const projects = {
     image: "/ui-ux-project.svg",
     project_list: [
       {
+        image: "/digi-haat.svg",
+        badge: "Graduation Project",
+        title: "Revamping DigiHaat",
+        url: "https://www.behance.net/gallery/224082411/Revamping-DigiHaat-Graduation-Project",
+        medal: false,
+        desc: "Working on DigiHaat within the ONDC ecosystem, focusing on the complete UX process—problem identification, user research, wireframing, UI design, and prototyping. ONDC, a Government of India initiative, aims to build an open, inclusive e-commerce network. DigiHaat contributes by enabling local artisans and MSMEs to participate fairly in the digital marketplace.",
+        cta_text: "View Case Study",
+        rank: 0,
+      },
+      {
         image: "/bridging-the-gap.svg",
         badge: "UI-UX Hackathon Project",
         title: "Bridging the Gap",
@@ -41,16 +51,6 @@ export const projects = {
         desc: "This project was created during the UI/UX Hackathon at IIT Patna on February, 2024, where we secured the top position. The challenge was to design a website for the clothing brand ZEPHYR, focusing on enhancing the online shopping experience. We developed a virtual reality website with a 360° product view, enabling users to make more informed and engaging purchasing decisions. By integrating immersive VR technology, ZEPHYR aims to elevate its value proposition, boosting customer satisfaction, loyalty, and sales through tailored and interactive experiences.",
         medal: true,
         url: "https://www.behance.net/gallery/209005949/ZEPHYR-(Award-Winning-UI-UX-Project)",
-        cta_text: "View Case Study",
-        rank: 1,
-      },
-      {
-        image: "/we-care.svg",
-        badge: "UI-UX Hackathon Project",
-        title: "We Care",
-        url: "https://www.behance.net/gallery/209138031/WE-CARE-(Award-Winning-UI-UX-Project)",
-        medal: true,
-        desc: "Developed for IIIT Bengaluru's UI/UX Hackathon (Nov 2023), WE CARE secured 1st place in just 48 hours. The app addresses the critical need for a supportive online community for individuals facing mental health challenges. Using AI, WE CARE provides a safe space for users to share experiences, seek guidance, and access valuable resources, enhancing engagement, trust, and loyalty in mental health care.",
         cta_text: "View Case Study",
         rank: 1,
       },
