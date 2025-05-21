@@ -19,8 +19,8 @@ const HeroSection = () => {
             </p>
           </FadeUp>
           <FadeUp delay={0.1} className="flex flex-col gap-2">
-            <div className="text-5xl font-bold tracking-tight max-w-[400px] max-sm:text-3xl leading-[60px]">
-              Fashion &<div>UI-UX Designer</div>
+            <div className="text-5xl font-bold tracking-tight max-w-[500px] max-sm:text-3xl leading-[60px]">
+              Product <div>Experience Designer</div>
             </div>
             <p className="text-[16px] font-medium">
               enjoy turning messy, real-world problems into design that makes
